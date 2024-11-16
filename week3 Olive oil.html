@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Olive Oil</title>
+  </head>
+  <style>
+    body {
+      background: linear-gradient(
+        180deg,
+        rgba(238, 255, 220, 1) 0%,
+        rgba(222, 255, 190, 1) 30%,
+        rgba(222, 255, 190, 1) 70%,
+        rgba(238, 255, 220, 1) 100%
+      );
+      margin: 20px;
+      border-style: double;
+    }
+    h1 {
+      font-family: "Lucida Sans";
+      font-size: 56px;
+      font-weight: 900;
+      text-align: center;
+    }
+    h2 {
+      font-family: "Lucida Sans";
+      font-size: 24px;
+      font-weight: 900;
+      margin: auto;
+      border: 4px double #363d0e;
+      border-radius: 0px 0px 45px 45px;
+      max-width: 130px;
+      padding: 14px 20px 15px 20px;
+      text-align: center;
+    }
+
+    img {
+      display: block;
+      margin: auto;
+      max-width: 50%;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
+
+    div {
+      font-family: "Lucida Sans";
+    }
+    p {
+      font-size: 16px;
+      margin: auto;
+      margin-top: 30px;
+      max-width: 750px;
+      padding: 10px 30px 0px;
+      text-align: justify;
+      text-align-last: center;
+      line-height: 1.5;
+    }
+    span {
+      font-size: 24px;
+    }
+
+    button {
+      display: block;
+
+      margin: auto;
+      border: 1px solid #363d0e;
+      background: #363d0e;
+      color: #deffbe;
+      font-size: 14px;
+      line-height: 22px;
+      padding: 12px 24px;
+      border-radius: 25px;
+      transition: all 200ms ease;
+      box-shadow: 0px 1px 6px 2px #769a73;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #deffbe;
+      color: #363d0e;
+      border: 1px solid #363d0e;
+    }
+
+    .learnMore {
+      padding-bottom: 40px;
+      padding-top: 0x;
+    }
+    .wikipedia {
+      text-align: center;
+      text-decoration: none;
+      color: #657507;
+    }
+    .wikipedia:hover {
+      color: #828c07;
+    }
+    .signature {
+      font-size: 12px;
+      padding-bottom: 20px;
+      padding-top: 0x;
+    }
+    .profile {
+      text-align: center;
+      text-decoration: none;
+      color: #657507;
+    }
+    .profile:hover {
+      color: #828c07;
+    }
+  </style>
+  <body>
+    <h1>Olive oil</h1>
+    <h2>
+      <em> We love it! </em>
+    </h2>
+    <br />
+    <img
+      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/145/175/original/Making-Your-Own-Olive-Oil.jpg?1727355841"
+      alt="Olive oil"
+    />
+    <div>
+      <p>
+        <span>O</span>live oil is a liquid fat obtained by pressing whole
+        olives, the fruit of Olea europaea, a traditional tree crop of the
+        Mediterranean Basin, and extracting the oil. It is commonly used in
+        cooking for frying foods or as a salad dressing. The olive is one of
+        three core food plants in Mediterranean cuisine, together with wheat and
+        grapes.
+      </p>
+
+      <p class="learnMore">
+        Learn more on
+        <a
+          href="https://en.wikipedia.org/wiki/Olive_oil"
+          target="_blank"
+          class="wikipedia"
+        >
+          wikipedia
+        </a>
+      </p>
+
+      <button class="buyButton">Buy Olive oil</button>
+      <br />
+      <p class="signature">
+        Built by
+        <a
+          href="https://www.linkedin.com/in/tal-nidam-44946b185/"
+          target="_blank"
+          class="profile"
+        >
+          <strong>Tal Nidam</strong>
+        </a>
+      </p>
+    </div>
+    <script>
+      let buyButton = document.querySelector(".buyButton");
+      buyButton.addEventListener("click", order);
+
+      function order() {
+        let name = prompt("What is your name?");
+        let country = prompt("In which country are you now?");
+        country = country.toLowerCase();
+
+        if (country === "portugal") {
+          alert(name + ", Try Pingo Doce!");
+        } else {
+          alert(name + ", Try your local supermarket!");
+        }
+      }
+    </script>
+  </body>
+</html>
